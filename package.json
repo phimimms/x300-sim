@@ -1,0 +1,16 @@
+{
+  "name": "x300-sim",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phimimms/x300-sim.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phimimms/x300-sim/issues"
+  },
+  "homepage": "https://github.com/phimimms/x300-sim#readme"
+}
