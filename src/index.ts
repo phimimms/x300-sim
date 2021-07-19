@@ -5,6 +5,8 @@ import express from 'express';
 import helmet from 'helmet';
 import xml from 'xml';
 
+_subscribeToNodeProcess();
+
 dotnet.config();
 
 const app = express();
@@ -71,6 +73,12 @@ function _getRandomTemperature() {
   return (baseTemp + (Math.random() < 0.5 ? 1 : -1) * tempVariance * Math.random()).toFixed(2);
 }
 
+function _onEndProcess() {
+  app?.close?.();
+
+  process.exit();
+}
+
 function _processQueryParameters(params) {
   for (let i = 1; i <= 3; i++) {
     if (!Object.prototype.hasOwnProperty.call(params, `relay${i}State`)) {
@@ -87,4 +95,12 @@ function _processQueryParameters(params) {
 
     break;
   }
+}
+
+function _subscribeToNodeProcess() {
+  process.stdin.resume();
+
+  process.on('SIGINT', _onEndProcess);
+  process.on('SIGUSR1', _onEndProcess);
+  process.on('uncaughtException', _onEndProcess);
 }
