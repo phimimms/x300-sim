@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "lib": [ "ESNext" ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es6",
+  },
+  "include": [ "src/**/*" ],
+}
