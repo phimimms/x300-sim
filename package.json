@@ -1,6 +1,6 @@
 {
   "name": "@phimimms/x300-sim",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A web server to simulate the X-300 WebRelay by Xytronix Research & Design",
   "scripts": {
     "prebuild": "npm run clean:build",
