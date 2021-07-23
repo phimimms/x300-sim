@@ -4,14 +4,14 @@
 
 * [NodeJS](https://nodejs.org/en/download/current/)
 
-## Usage
+## Installation
 
 1. Download the latest [package](https://github.com/phimimms/x300-sim/packages/904085)
 2. Extract the compressed download
 3. Open a terminal to the extracted package directory
 4. Run the web server via `node index.js`
 
-## API
+## Usage
 
 Prior to running the web server, the `.env` file can be edited to configure the behavior of the X-300 Relay simulator.
 
