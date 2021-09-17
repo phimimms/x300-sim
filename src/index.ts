@@ -1,13 +1,13 @@
 import bodyParser from 'body-parser';
 import compression from 'compression';
-import dotnet from 'dotenv';
+import dotenv from 'dotenv';
 import express from 'express';
 import helmet from 'helmet';
 import xml from 'xml';
 
 _subscribeToNodeProcess();
 
-dotnet.config();
+dotenv.config();
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(compression());
 
 app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }));
 
-const port = Number.isInteger(+process.env.PORT) ? process.env.PORT : 80;
+const port = Number.isInteger(+process.env.PORT) ? process.env.PORT : 2020;
 
 const state = {
   relay1: Number.isInteger(+process.env.RELAY_1) ? process.env.RELAY_1 : '0',
